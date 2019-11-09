@@ -3,3 +3,21 @@
 @import "./phoenix.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../node_modules/font-awesome/css/font-awesome.css";
+
+.link{
+    color: #000000;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+}
+
+.flex-row {
+    justify-content: center;
+}

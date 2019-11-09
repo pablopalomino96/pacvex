@@ -4,27 +4,43 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Pablo Palomino Gómez</title>
+    <title>Pablo PG</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
-        </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
-    </header>
-    <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <div class="container">
+      <br>
+      <ul class="nav justify-content-end">
+	<li class="nav-item">
+	  <a class="nav-link active link" href="<%= Routes.page_path(@conn, :index) %>">Home</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link disabled" href="#" aria-disabled="true">Skills</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link disabled" href="#" aria-disabled="true">Education</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link disabled" href="#" aria-disabled="true">Experience</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link disabled" href="#" aria-disabled="true">Work</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link disabled" href="#" aria-disabled="true">Blog</a>
+	</li>
+	<li class="nav-item">
+	  <a class="nav-link link" href="<%= Routes.page_path(@conn, :contact) %>">Contact</a>
+	</li>
+      </ul>
+      <div class="row"></div>
       <%= render @view_module, @view_template, assigns %>
-    </main>
-    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+
+    </div>
+    <footer class="page-footer font-small cyan darken-3">
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+	<a><b>Pablo Palomino Gómez</b></a>
+      </div>
+    </footer>
   </body>
 </html>
