@@ -1,9 +1,23 @@
-<div class="row">
-  <div class="col"></div>
-  <div class="col">
-   <div class="alert alert-light text-center" role="alert">
-      Comming soon ...
-   </div>
-  </div>
-  <div class="col"></div>
-</div>
+<!--Section: Contact v.2-->
+<section class="mb-4">
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any question for me?</p>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <ul class="list-unstyled mb-0">
+          <li><a class="link fa fa-map-marker fa-4x" aria-hidden="true"
+		 href="https://goo.gl/maps/witqUgMrtG3BJh1N9" target="_blank"></a>
+            <p>Consuegra, Toledo</p>
+          </li>
+	  <br>
+          <li><i class="fa fa-phone fa-4x"></i>
+            <p>+34 689 659 305</p>
+          </li>
+	  <br>
+          <li><a class="link fa fa-envelope fa-4x" href="mailto:pablopalomino96@gmail.com"></a>
+            <p>pablopalomino96@gmail.com</p>
+          </li>
+        </ul>
+        </div>
+    </div>
+</section>

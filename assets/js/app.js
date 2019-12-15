@@ -12,7 +12,7 @@ import css from "../css/app.css"
 import "phoenix_html"
 
 // Import Bootstrap
-import 'bootstrap';
+//import 'bootstrap';
 // Import local files
 //
 // Local files can be imported directly using relative paths, for example:
@@ -21,3 +21,8 @@ import 'bootstrap';
 import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
+
+$(document).ready(function() {
+    $("#footer").fadeIn(250);
+    $("#active-content").fadeIn(1500);
+});

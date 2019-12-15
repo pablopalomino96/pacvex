@@ -35,12 +35,12 @@
       </ul>
       <div class="row"></div>
       <%= render @view_module, @view_template, assigns %>
-
     </div>
-    <footer class="page-footer font-small cyan darken-3">
+    <footer id="footer" class="page-footer font-small cyan darken-3 active-content">
       <div class="footer-copyright text-center py-3">© 2019 Copyright:
 	<a><b>Pablo Palomino Gómez</b></a>
       </div>
     </footer>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
