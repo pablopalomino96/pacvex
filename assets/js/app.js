@@ -22,7 +22,8 @@ import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
 
-$(document).ready(function() {
+$(document).ready(function () {
     $("#footer").fadeIn(250);
     $("#active-content").fadeIn(1500);
+    $("#inner-content").fadeIn(1900);
 });

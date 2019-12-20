@@ -1,10 +1,10 @@
 <div id="active-content" class="text-center active-content">
-  <img src="<%= Routes.static_path(@conn, "/images/avatar.png") %>" class="avatar rounded-circle" alt="Author's avatar"/>
+  <img src="<%= Routes.static_path(@conn, "/images/avatar.png") %>" class="avatar rounded-circle" alt="Owner's avatar"/>
   <br>
-  <h2 id="name"><a>Pablo Palomino Gómez</a></h2>
-  <span class="position">Software Engineer at <a class="link active" href="https://www.bizneo.com/es" target="_blank">Bizneo HR</a></span>
+  <h2 id="name"><a><%= @owner.name %></a></h2>
+  <span class="position"><%= @owner.position %> at <a class="link active" href="https://www.bizneo.com/es" target="_blank">Bizneo HR</a></span>
   <ul class="navbar-nav flex-row">
-    <li class="nav-item grow"><a class="nav-link px-2" href="mailto:pablopalomino96@gmail.com"
+    <li class="nav-item grow"><a class="nav-link px-2" href="mailto:<%= @owner.email %>"
 				 target="_blank"><span class="link fa fa-envelope-o fa-2x"></span></a></li>
     <li class="nav-item grow"><a class="nav-link px-2" href="https://www.instagram.com/papago96/"
 				 target="_blank"><span class="link fa fa-instagram fa-2x"></span></a></li>
@@ -17,19 +17,14 @@
   </ul>
   <br>
   <div class="row">
-    <div class="col"></div>
-    <div class="col">
+    <div class="col-sm"></div>
+    <div class="col-lg-6">
       <div class="delimiter"></div>
-      <p class="description">
-        <h1 class="section-title" ><a>About me</a></h1>
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)
-        desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-        No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.
-        Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición,
-        como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+      <h1 class="section-title" ><a>Welcome</a></h1>
+      <p id='inner-content' class="description active-content">
+        <%= @owner.description %>
       </p>
     </div>
-    <div class="col"></div>
+    <div class="col-sm"></div>
   </div>
 </div>
