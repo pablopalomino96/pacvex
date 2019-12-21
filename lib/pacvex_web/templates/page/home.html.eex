@@ -2,17 +2,17 @@
   <img src="<%= Routes.static_path(@conn, "/images/avatar.png") %>" class="avatar rounded-circle" alt="Owner's avatar"/>
   <br>
   <h2 id="name"><a><%= @owner.name %></a></h2>
-  <span class="position"><%= @owner.position %> at <a class="link active" href="https://www.bizneo.com/es" target="_blank">Bizneo HR</a></span>
+  <span class="position"><%= @owner.position %> at <a class="link active" href="<%= @owner.company.website %>" target="_blank"><%= @owner.company.name %></a></span>
   <ul class="navbar-nav flex-row">
     <li class="nav-item grow"><a class="nav-link px-2" href="mailto:<%= @owner.email %>"
 				 target="_blank"><span class="link fa fa-envelope-o fa-2x"></span></a></li>
-    <li class="nav-item grow"><a class="nav-link px-2" href="https://www.instagram.com/papago96/"
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.instagram %>"
 				 target="_blank"><span class="link fa fa-instagram fa-2x"></span></a></li>
-    <li class="nav-item grow"><a class="nav-link px-2" href="https://github.com/pablopalomino96"
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.github %>"
 				 target="_blank"><span class="link fa fa-github fa-2x"></span></a></li>
-    <li class="nav-item grow"><a class="nav-link px-2" href="http://www.linkedin.com/in/pablo-palomino-g%C3%B3mez-27705712a"
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.linkedin %>"
 				 target="_blank"><span class="link fa fa-linkedin fa-2x"></span></a></li>
-    <li class="nav-item grow"><a class="nav-link px-2" href="https://open.spotify.com/user/papago96?si=6h1Ot5IoR8u9eL89iESA1g"
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.spotify %>"
 				 target="_blank"><span class="link fa fa-spotify fa-2x"></span></a></li>
   </ul>
   <br>

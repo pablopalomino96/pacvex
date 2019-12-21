@@ -1,20 +1,10 @@
 defmodule PacvexWeb.PageControllerTest do
   use PacvexWeb.ConnCase
 
-  alias Pacvex.Accounts
+  import Pacvex.Factory
 
   setup do
-    {:ok, owner} =
-      Accounts.create_user(%{
-        admin: true,
-        description: "some description",
-        email: "some email",
-        location: "some location",
-        location_url: "some location_url",
-        name: "some name",
-        phone: "some phone",
-        position: "some position"
-      })
+    {:ok, owner} = create(:user, %{admin: true})
 
     {:ok, owner: owner}
   end
