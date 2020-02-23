@@ -11,7 +11,7 @@ Pacvex is a CMS for my personal portfolio website. It's made in [Elixir](http://
 ```sh
 asdf install
 ```
-- Get dependecies:
+- Get dependencies:
 ```sh
 mix deps.get
 ```
@@ -32,4 +32,5 @@ You need to create an admin user with your data (Cookbook coming soon...)
 
 ----
 Pacvex - Minimal cv website made in Elixir / Phoenix.
+
 © Pablo Palomino Gómez, 2019
