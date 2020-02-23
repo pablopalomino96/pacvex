@@ -1,20 +1,35 @@
-# Pacvex
+# Pacvex 
 
-To start your Phoenix server:
+## What is Pacvex?
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+Pacvex is a CMS for my personal portfolio website. It's made in [Elixir](http://elixir-lang.org) and built with [Phoenix](http://www.phoenixframework.org).
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Run it locally and development
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+- Clone this repo from Github
+- Install `.tools-versions` dependencies via `asdf`:
+```sh
+asdf install
+```
+- Get dependecies:
+```sh
+mix deps.get
+```
+- Create and migrate the database:
+```sh
+mix ecto.create ; mix ecto.migrate
+```
+- Install node.js dependencies:
+```sh
+cd assets && npm install
+```
+- Start Phoenix server:
+```sh
+mix phx.server
+```
 
-## Learn more
+You need to create an admin user with your data (Cookbook coming soon...)
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+----
+Pacvex - Minimal cv website made in Elixir / Phoenix.
+© Pablo Palomino Gómez, 2019

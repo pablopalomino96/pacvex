@@ -1,4 +1,0 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Pacvex" %></h1>
-  <h2>Comming soon...</h2>
-</section>

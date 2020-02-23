@@ -1,0 +1,30 @@
+<div id="active-content" class="text-center active-content">
+  <img src="<%= Routes.static_path(@conn, "/images/avatar.png") %>" class="avatar rounded-circle" alt="Owner's avatar"/>
+  <br>
+  <h2 id="name"><a><%= @owner.name %></a></h2>
+  <span class="position"><%= @owner.position %> at <a class="link active" href="<%= @owner.company.website %>" target="_blank"><%= @owner.company.name %></a></span>
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item grow"><a class="nav-link px-2" href="mailto:<%= @owner.email %>"
+				 target="_blank"><span class="link fa fa-envelope-o fa-2x"></span></a></li>
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.instagram %>"
+				 target="_blank"><span class="link fa fa-instagram fa-2x"></span></a></li>
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.github %>"
+				 target="_blank"><span class="link fa fa-github fa-2x"></span></a></li>
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.linkedin %>"
+				 target="_blank"><span class="link fa fa-linkedin fa-2x"></span></a></li>
+    <li class="nav-item grow"><a class="nav-link px-2" href="<%= @owner.social_media.spotify %>"
+				 target="_blank"><span class="link fa fa-spotify fa-2x"></span></a></li>
+  </ul>
+  <br>
+  <div class="row">
+    <div class="col-sm"></div>
+    <div class="col-lg-6">
+      <div class="delimiter"></div>
+      <h1 class="section-title" ><a>Welcome</a></h1>
+      <p id='inner-content' class="description active-content">
+        <%= @owner.description %>
+      </p>
+    </div>
+    <div class="col-sm"></div>
+  </div>
+</div>
