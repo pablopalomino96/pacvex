@@ -2,7 +2,11 @@
 
 ## What is Pacvex?
 
-Pacvex is a CMS for my personal portfolio website. It's made in [Elixir](http://elixir-lang.org) and built with [Phoenix](http://www.phoenixframework.org).
+Pacvex is a CMS for a personal portfolio website. It's made in [Elixir](http://elixir-lang.org) and built with [Phoenix](http://www.phoenixframework.org).
+
+## My own pacvex
+
+My personal website based in Pacvex is running on [Heroku](https://www.heroku.com/). You can visit me [here](https://pacvex.herokuapp.com/).
 
 ## Run it locally and development
 

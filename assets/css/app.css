@@ -39,6 +39,12 @@ html, body {
 .link {
     color: #ffffff;
 }
+
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
 .active {
     font-weight: bold;
 }
