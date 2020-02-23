@@ -11,6 +11,12 @@ html, body {
     background-size: cover;
     background-color: #1E1E1E;
     color: #ffffff;
+    font-size: medium;
+    font-family: "CourierPrimeRegular", monospace;
+}
+
+.container {
+    max-width: 1500px;
 }
 
 .section-title {
@@ -28,7 +34,6 @@ html, body {
 
 .description {
     text-align: center;
-    font-size: x-small;
 }
 
 .link {
@@ -40,16 +45,8 @@ html, body {
 
 .avatar {
     vertical-align: middle;
-    width: 100px;
-    height: 100px;
-}
-
-.name {
-    font-size: medium;
-}
-
-.position {
-    font-size: x-small;
+    width: 15%;
+    height: 12%;
 }
 
 .flex-row {
