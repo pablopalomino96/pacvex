@@ -6,7 +6,7 @@ Pacvex is a CMS for a personal portfolio website. It's made in [Elixir](http://e
 
 ## My own pacvex
 
-My personal website based in Pacvex is running on [Heroku](https://www.heroku.com/). You can visit me [here](https://pacvex.herokuapp.com/).
+My personal website based in Pacvex is running on [Heroku](https://www.heroku.com/). You can visit me [here](https://iampablopg.herokuapp.com/).
 
 ## Run it locally and development
 
