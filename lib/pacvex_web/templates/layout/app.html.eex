@@ -9,33 +9,39 @@
   </head>
   <body>
     <div class="container">
-      <br>
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link active link" href="<%= Routes.page_path(@conn, :index) %>">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" aria-disabled="true">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" aria-disabled="true">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" aria-disabled="true">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" aria-disabled="true">Work</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" aria-disabled="true">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link" href="<%= Routes.page_path(@conn, :contact) %>">Contact</a>
-        </li>
-      </ul>
-      <div class="row"></div>
+      <nav class="navbar navbar-toggleable-md navbar-inverse">
+        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link link" href="<%= Routes.page_path(@conn, :index) %>">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" aria-disabled="true">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" aria-disabled="true">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" aria-disabled="true">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" aria-disabled="true">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" aria-disabled="true">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="<%= Routes.page_path(@conn, :contact) %>">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <%= render @view_module, @view_template, assigns %>
     </div>
+    <button id="totop" type="button" class="btn btn-outline-light grow" onclick="$('html, body').animate({ scrollTop: '0' }, 250); "><span class="fa fa-angle-up fa-2x"></span></button>
     <footer id="footer" class="page-footer font-small cyan darken-3 active-content">
       <div class="footer-copyright text-center py-3">© 2019 Copyright:
         <a><b>Pablo Palomino Gómez</b></a>
