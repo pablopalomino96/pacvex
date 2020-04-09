@@ -1,7 +1,6 @@
 <div id="active-content" class="text-center active-content">
   <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
   <p class="text-center description w-responsive mx-auto mb-5">Do you have any question for me?</p>
-  <div class="row">
     <div id='inner-content' class="col-md-12 text-center active-content">
       <a class="link fa fa-map-marker fa-4x" aria-hidden="true"
 		  href="<%= @owner.location_url %>" target="_blank"></a>
@@ -13,5 +12,4 @@
       <a class="link fa fa-envelope fa-4x" href="mailto:<%= @owner.email %>" ></a>
       <p><%= @owner.email %></p>
     </div>
-  </div>
 </div>

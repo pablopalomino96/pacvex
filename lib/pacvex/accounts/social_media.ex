@@ -5,12 +5,12 @@ defmodule Pacvex.Accounts.Social_media do
   alias Pacvex.Accounts.User
 
   schema "social_medias" do
-    field :github, :string
-    field :instagram, :string
-    field :linkedin, :string
-    field :spotify, :string
+    field(:github, :string)
+    field(:instagram, :string)
+    field(:linkedin, :string)
+    field(:spotify, :string)
 
-    belongs_to :user, User
+    belongs_to(:user, User)
 
     timestamps()
   end

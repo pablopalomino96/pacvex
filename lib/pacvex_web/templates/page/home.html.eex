@@ -16,15 +16,13 @@
 				 target="_blank"><span class="link fa fa-spotify fa-2x"></span></a></li>
   </ul>
   <br>
-  <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-lg-6">
-      <div class="delimiter"></div>
-      <h1 class="section-title" ><a>Welcome</a></h1>
-      <p id='inner-content' class="description active-content">
+  <div class>
+  <div class="delimiter"></div>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4" id="greeting"></h1>
+      <p id='inner-content' class="lead description active-content">
         <%= @owner.description %>
       </p>
-    </div>
-    <div class="col-sm"></div>
   </div>
 </div>
