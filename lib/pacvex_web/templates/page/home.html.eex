@@ -25,11 +25,4 @@
         <%= @owner.description %>
       </p>
   </div>
-  <div class="jumbotron jumbotron-fluid secondary-content" id="secondary-content">
-  <div class="container">
-    <h1 class="display-4">Latest Post</h1>
-      <p class="lead description">
-        Lorem Ipsum
-      </p>
-  </div>
-</div> 
+</div>
