@@ -1,4 +1,4 @@
-defmodule Pacvex.Accounts.Social_media do
+defmodule Pacvex.Accounts.SocialMedia do
   use Ecto.Schema
   import Ecto.Changeset
 

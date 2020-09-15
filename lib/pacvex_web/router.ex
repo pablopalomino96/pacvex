@@ -17,6 +17,7 @@ defmodule PacvexWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/skills", PageController, :skills
     get "/contact", PageController, :contact
   end
 

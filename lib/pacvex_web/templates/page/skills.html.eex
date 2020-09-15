@@ -1,0 +1,21 @@
+<div id="active-content" class="text-center active-content">
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Favourite Programming Languages ♥</h2>
+  <ul class="skills">
+    <%= for skill <- @skills do %>
+	<div class="card mb-3 mx-auto">
+	  <div class="row no-gutters justify-content-center align-items-center">
+	    <div class="col-md-3">
+	      <img src="<%= Routes.static_path(@conn, skill.logo) %>" class="card-img" alt="..."/>
+	    </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h3 class="card-title active"><%= skill.name %></h3>
+		<p class="card-text"><%= skill.description %></p>
+                <p class="card-text"><a class="link active" href="<%= skill.website %>" target="_blank"><%= skill.website %></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </ul>
+</div>

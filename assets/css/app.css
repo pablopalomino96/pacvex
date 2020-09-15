@@ -85,6 +85,24 @@ a:hover {
     display: none;
 }
 
+.card {
+    background-color: #1E1E1E;
+    border-color: #ffffff;
+    max-width: 68%;
+}
+
+.card-img {
+    width: 40%;
+    height: auto;
+}
+
+.card-body {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 100%;
@@ -106,7 +124,7 @@ a:hover {
     .avatar {
 	vertical-align: middle;
 	width: 30%;
-	height: 15%;
+	height: auto;
     }
 
     .active-content {

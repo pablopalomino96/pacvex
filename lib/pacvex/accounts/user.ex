@@ -3,7 +3,8 @@ defmodule Pacvex.Accounts.User do
   import Ecto.Changeset
 
   alias Pacvex.Accounts.Company
-  alias Pacvex.Accounts.Social_media
+  alias Pacvex.Accounts.SocialMedia
+  alias Pacvex.Accounts.Skill
 
   schema "users" do
     field :admin, :boolean, default: false
@@ -15,9 +16,10 @@ defmodule Pacvex.Accounts.User do
     field :phone, :string
     field :position, :string
 
-    has_one :social_media, Social_media, on_replace: :delete
+    has_one :social_media, SocialMedia, on_replace: :delete
     has_one :company, Company, on_replace: :delete
-
+    has_many :skills, Skill
+    
     timestamps()
   end
 

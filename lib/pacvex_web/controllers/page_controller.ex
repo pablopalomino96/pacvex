@@ -12,6 +12,12 @@ defmodule PacvexWeb.PageController do
     render(conn, "home.html", owner: owner)
   end
 
+  def skills(%{assigns: %{owner: user}} = conn, _params) do
+    %{skills: skills} = Repo.preload(user, [:company, :skills])
+
+    render(conn, "skills.html", skills: skills)
+  end
+  
   def contact(%{assigns: %{owner: owner}} = conn, _params) do
     render(conn, "contact.html", owner: owner)
   end

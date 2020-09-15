@@ -20,20 +20,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link link" href="<%= Routes.page_path(@conn, :index) %>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" aria-disabled="true">Skills</a>
+              <a class="nav-link" href="<%= Routes.page_path(@conn, :skills) %>">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" aria-disabled="true">Education</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" aria-disabled="true">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" aria-disabled="true">Work</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" aria-disabled="true">Blog</a>

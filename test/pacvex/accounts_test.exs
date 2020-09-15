@@ -64,4 +64,69 @@ defmodule Pacvex.AccountsTest do
       assert %Ecto.Changeset{} = Accounts.change_user(user)
     end
   end
+
+  describe "skills" do
+    alias Pacvex.Accounts.Skill
+
+    @valid_attrs %{logo: "some logo", name: "some name", rate: 42, website: "some website"}
+    @update_attrs %{logo: "some updated logo", name: "some updated name", rate: 43, website: "some updated website"}
+    @invalid_attrs %{logo: nil, name: nil, rate: nil, website: nil}
+
+    def skill_fixture(attrs \\ %{}) do
+      {:ok, skill} =
+        attrs
+        |> Enum.into(@valid_attrs)
+        |> Accounts.create_skill()
+
+      skill
+    end
+
+    test "list_skills/0 returns all skills" do
+      skill = skill_fixture()
+      assert Accounts.list_skills() == [skill]
+    end
+
+    test "get_skill!/1 returns the skill with given id" do
+      skill = skill_fixture()
+      assert Accounts.get_skill!(skill.id) == skill
+    end
+
+    test "create_skill/1 with valid data creates a skill" do
+      assert {:ok, %Skill{} = skill} = Accounts.create_skill(@valid_attrs)
+      assert skill.logo == "some logo"
+      assert skill.name == "some name"
+      assert skill.rate == 42
+      assert skill.website == "some website"
+    end
+
+    test "create_skill/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Accounts.create_skill(@invalid_attrs)
+    end
+
+    test "update_skill/2 with valid data updates the skill" do
+      skill = skill_fixture()
+      assert {:ok, %Skill{} = skill} = Accounts.update_skill(skill, @update_attrs)
+      assert skill.logo == "some updated logo"
+      assert skill.name == "some updated name"
+      assert skill.rate == 43
+      assert skill.website == "some updated website"
+    end
+
+    test "update_skill/2 with invalid data returns error changeset" do
+      skill = skill_fixture()
+      assert {:error, %Ecto.Changeset{}} = Accounts.update_skill(skill, @invalid_attrs)
+      assert skill == Accounts.get_skill!(skill.id)
+    end
+
+    test "delete_skill/1 deletes the skill" do
+      skill = skill_fixture()
+      assert {:ok, %Skill{}} = Accounts.delete_skill(skill)
+      assert_raise Ecto.NoResultsError, fn -> Accounts.get_skill!(skill.id) end
+    end
+
+    test "change_skill/1 returns a skill changeset" do
+      skill = skill_fixture()
+      assert %Ecto.Changeset{} = Accounts.change_skill(skill)
+    end
+  end
 end

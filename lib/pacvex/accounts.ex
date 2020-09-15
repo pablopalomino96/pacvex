@@ -38,6 +38,8 @@ defmodule Pacvex.Accounts do
     |> delete_social_media()
     |> Repo.preload(:company)
     |> delete_company()
+    |> Repo.preload(:skills)
+    |> delete_skills()
     |> Repo.delete()
   end
 
@@ -57,6 +59,15 @@ defmodule Pacvex.Accounts do
 
   def delete_company(%User{id: user_id, company: company}) do
     {:ok, _} = Repo.delete(company)
+
+    # Reload user
+    get_user!(user_id)
+  end
+
+  def delete_skills(%User{skills: nil} = user), do: user
+
+  def delete_skills(%User{id: user_id, skills: skills}) when is_list(skills) do
+    {:ok, _} = Enum.map(skills, &Repo.delete(&1))
 
     # Reload user
     get_user!(user_id)
